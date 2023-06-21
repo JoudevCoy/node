@@ -7,7 +7,6 @@ const port = 3000;
 const renderHTML = (path, res) => {
   fs.readFile(path, (err, data) => {
     if(err){
-      console.log("error 404");
     } else {
       res.write(data);
       res.end();
@@ -22,12 +21,17 @@ http
     })
     
     //memasukan nilai url
+    const url = req.url;
     
     switch(url){
+      case '/about':
+        renderHTML('./about.html', res);
+        console.log("about");
+        break;
       default:
         renderHTML('./index.html', res);
-      case '/about':
-        renderHTML('./about/index.html', res);
+        console.log("home");
+        break;
     }
 
   })
