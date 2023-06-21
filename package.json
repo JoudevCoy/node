@@ -1,14 +1,21 @@
 {
-  "name": "project1",
+  "name": "myproject",
   "version": "1.0.0",
-  "description": "myfirstnodeapp",
+  "description": "Hello! This is my first project in github",
   "main": "index.js",
   "scripts": {
-    "test": " Test",
-    "start": "node index"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Joudev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoudevCoy/node.git"
+  },
+  "author": "JoudevCoy",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoudevCoy/node/issues"
+  },
+  "homepage": "https://github.com/JoudevCoy/node#readme",
   "dependencies": {
     "express": "^4.18.2"
   }
