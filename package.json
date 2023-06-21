@@ -1,0 +1,12 @@
+{
+  "name": "projek1",
+  "version": "1.0.0",
+  "description": "myfirstnodeapp",
+  "main": "index.js",
+  "scripts": {
+    "test": " Test",
+    "start": "node index"
+  },
+  "author": "Joudev",
+  "license": "ISC"
+}
