@@ -8,9 +8,10 @@ const renderHTML = (path, res) => {
   fs.readFile(path, (err, data) => {
     if(err){
       console.log("error 404");
+    } else {
+      res.write(data);
+      res.end();
     }
-    res.write(data);
-    res.end();
   });
 }
 
