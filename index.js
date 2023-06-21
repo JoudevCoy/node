@@ -1,10 +1,14 @@
 const http = require("http");
+const url = require("url");
 const fs = require("fs");
 
 const port = 3000;
 
 const renderHTML = (path, res) => {
   fs.readFile(path, (err, data) => {
+    if(err){
+      console.log("error 404");
+    }
     res.write(data);
     res.end();
   });
@@ -17,7 +21,6 @@ http
     })
     
     //memasukan nilai url
-    const url = req.url;
     
     switch(url){
       default:
