@@ -3,13 +3,30 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Ini adalah halaman Home');
+  // res.send('Ini adalah halaman Home');
+  // res.json({
+  //   nama: "jonathan",
+  //   umur: 14,
+  //   tempat: "desa Telap"
+  // });
+  res.sendFile('./index.html', {root: __dirname});
 });
 
 app.get('/about', (req, res) => {
   res.send('Ini adalah halaman about');
 });
 
+
+
+
+//404 
+app.use('/', (req, res) => {
+  res.status(404)
+  res.send('404 not found');
+});
+
+
+//start server
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 })
