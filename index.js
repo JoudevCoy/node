@@ -5,7 +5,7 @@ const port = 3000;
 app.get('/', (req, res) => {
   // res.send('Ini adalah halaman Home');
   // res.json({
-  //   nama: "jonathan",
+  //   nama: "joudev",
   //   umur: 14,
   //   tempat: "desa Telap"
   // });
