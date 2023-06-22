@@ -12,9 +12,18 @@ app.get('/', (req, res) => {
   res.sendFile('./index.html', {root: __dirname});
 });
 
+app.get('/dashboard', (req, res) => {
+  res.send(" ini adalah halaman dashboard " + req.query.name);
+});
+
 app.get('/about', (req, res) => {
   res.sendFile('./about.html', { root: __dirname});
 });
+
+app.get('/about/:info/nama/:name', (req, res) => {
+  res.send(`ini adalah halaman ${req.params.info} <a href="/about/info/nama/jonathan"> lihat lebih lanjut </a> <br> perkenalkan nama saya ${req.params.name} `);
+});
+
 
 
 
