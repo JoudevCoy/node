@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  res.send('Ini adalah halaman about');
+  res.sendFile('./about.html', { root: __dirname});
 });
 
 
