@@ -24,6 +24,10 @@ app.get('/about/:info/nama/:name', (req, res) => {
   res.send(`ini adalah halaman ${req.params.info} <a href="/about/info/nama/jonathan"> lihat lebih lanjut </a> <br> perkenalkan nama saya ${req.params.name} `);
 });
 
+app.get('/info', (req, res) => {
+  res.send(`Apakah kamu mencari: ${req.query.search}`);
+});
+
 
 
 
